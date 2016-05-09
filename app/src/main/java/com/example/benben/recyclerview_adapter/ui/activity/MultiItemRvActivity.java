@@ -1,4 +1,4 @@
-package com.example.benben.recyclerview_adapter;
+package com.example.benben.recyclerview_adapter.ui.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,8 +9,10 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.benben.rcyclerviewlibrary.recyclerview.OnItemClickListener;
-import com.example.benben.recyclerview_adapter.adapter.ChatAdapterForRv;
+
+import com.example.benben.recyclerview_adapter.R;
 import com.example.benben.recyclerview_adapter.bean.ChatMessage;
+import com.example.benben.recyclerview_adapter.ui.adapter.ChatAdapterForRv;
 
 
 public class MultiItemRvActivity extends AppCompatActivity

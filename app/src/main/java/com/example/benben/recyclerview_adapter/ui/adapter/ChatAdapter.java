@@ -1,35 +1,40 @@
-package com.example.benben.recyclerview_adapter.adapter;
+package com.example.benben.recyclerview_adapter.ui.adapter;
+
 
 import android.content.Context;
 
 import com.example.benben.rcyclerviewlibrary.ViewHolder;
-import com.example.benben.rcyclerviewlibrary.recyclerview.MultiItemCommonAdapter;
-import com.example.benben.rcyclerviewlibrary.recyclerview.MultiItemTypeSupport;
+import com.example.benben.rcyclerviewlibrary.abslistview.MultiItemCommonAdapter;
+import com.example.benben.rcyclerviewlibrary.abslistview.MultiItemTypeSupport;
 import com.example.benben.recyclerview_adapter.R;
 import com.example.benben.recyclerview_adapter.bean.ChatMessage;
 
 import java.util.List;
 
-
 /**
- * Created by zhy on 15/9/4.
+ * Created by benben on 2016/5/7.
  */
-public class ChatAdapterForRv extends MultiItemCommonAdapter<ChatMessage>
+public class ChatAdapter extends MultiItemCommonAdapter<ChatMessage>
 {
-    public ChatAdapterForRv(Context context, List<ChatMessage> datas)
+    public ChatAdapter(Context context, List<ChatMessage> datas)
     {
         super(context, datas, new MultiItemTypeSupport<ChatMessage>()
         {
             @Override
-            public int getLayoutId(int itemType)
+            public int getLayoutId(int position, ChatMessage msg)
             {
-                if (itemType == ChatMessage.RECIEVE_MSG)
+                if (msg.isComMeg())
                 {
                     return R.layout.main_chat_from_msg;
-                } else
-                    return R.layout.main_chat_send_msg;
+                }
+                return R.layout.main_chat_send_msg;
             }
 
+            @Override
+            public int getViewTypeCount()
+            {
+                return 2;
+            }
             @Override
             public int getItemViewType(int postion, ChatMessage msg)
             {

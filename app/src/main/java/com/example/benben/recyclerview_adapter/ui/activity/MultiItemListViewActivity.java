@@ -1,11 +1,13 @@
-package com.example.benben.recyclerview_adapter;
+package com.example.benben.recyclerview_adapter.ui.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
-import com.example.benben.recyclerview_adapter.adapter.ChatAdapter;
+
+import com.example.benben.recyclerview_adapter.R;
 import com.example.benben.recyclerview_adapter.bean.ChatMessage;
+import com.example.benben.recyclerview_adapter.ui.adapter.ChatAdapter;
 
 
 public class MultiItemListViewActivity extends AppCompatActivity

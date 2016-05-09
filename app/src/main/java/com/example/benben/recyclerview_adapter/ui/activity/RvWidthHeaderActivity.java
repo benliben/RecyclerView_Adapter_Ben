@@ -1,4 +1,4 @@
-package com.example.benben.recyclerview_adapter;
+package com.example.benben.recyclerview_adapter.ui.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +16,7 @@ import com.example.benben.rcyclerviewlibrary.recyclerview.DividerItemDecoration;
 import com.example.benben.rcyclerviewlibrary.recyclerview.OnItemClickListener;
 import com.example.benben.rcyclerviewlibrary.recyclerview.support.SectionAdapter;
 import com.example.benben.rcyclerviewlibrary.recyclerview.support.SectionSupport;
+import com.example.benben.recyclerview_adapter.R;
 
 import java.util.ArrayList;
 import java.util.List;
