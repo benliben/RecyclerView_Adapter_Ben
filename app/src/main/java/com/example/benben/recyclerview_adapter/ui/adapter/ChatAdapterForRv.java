@@ -6,7 +6,7 @@ import com.example.benben.rcyclerviewlibrary.ViewHolder;
 import com.example.benben.rcyclerviewlibrary.recyclerview.MultiItemCommonAdapter;
 import com.example.benben.rcyclerviewlibrary.recyclerview.MultiItemTypeSupport;
 import com.example.benben.recyclerview_adapter.R;
-import com.example.benben.recyclerview_adapter.bean.ChatMessage;
+import com.example.benben.recyclerview_adapter.bean.ChatModel;
 
 import java.util.List;
 
@@ -14,16 +14,16 @@ import java.util.List;
 /**
  * Created by beneben on 2016/5/7.
  */
-public class ChatAdapterForRv extends MultiItemCommonAdapter<ChatMessage>
+public class ChatAdapterForRv extends MultiItemCommonAdapter<ChatModel>
 {
-    public ChatAdapterForRv(Context context, List<ChatMessage> datas)
+    public ChatAdapterForRv(Context context, List<ChatModel> datas)
     {
-        super(context, datas, new MultiItemTypeSupport<ChatMessage>()
+        super(context, datas, new MultiItemTypeSupport<ChatModel>()
         {
             @Override
             public int getLayoutId(int itemType)
             {
-                if (itemType == ChatMessage.RECIEVE_MSG)
+                if (itemType == ChatModel.RECIEVE_MSG)
                 {
                     return R.layout.main_chat_from_msg;
                 } else
@@ -31,19 +31,19 @@ public class ChatAdapterForRv extends MultiItemCommonAdapter<ChatMessage>
             }
 
             @Override
-            public int getItemViewType(int postion, ChatMessage msg)
+            public int getItemViewType(int postion, ChatModel msg)
             {
                 if (msg.isComMeg())
                 {
-                    return ChatMessage.RECIEVE_MSG;
+                    return ChatModel.RECIEVE_MSG;
                 }
-                return ChatMessage.SEND_MSG;
+                return ChatModel.SEND_MSG;
             }
         });
     }
 
     @Override
-    public void convert(ViewHolder holder, ChatMessage chatMessage)
+    public void convert(ViewHolder holder, ChatModel chatMessage)
     {
 
         switch (holder.getLayoutId())

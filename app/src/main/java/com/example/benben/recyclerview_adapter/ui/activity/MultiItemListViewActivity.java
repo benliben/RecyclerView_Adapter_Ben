@@ -6,9 +6,13 @@ import android.widget.ListView;
 
 
 import com.example.benben.recyclerview_adapter.R;
-import com.example.benben.recyclerview_adapter.bean.ChatMessage;
+import com.example.benben.recyclerview_adapter.bean.ChatModel;
 import com.example.benben.recyclerview_adapter.ui.adapter.ChatAdapter;
 
+/**
+ * Created by benben on 2016/5/6.
+ * 多个item用listView
+ */
 
 public class MultiItemListViewActivity extends AppCompatActivity
 {
@@ -22,8 +26,10 @@ public class MultiItemListViewActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         mListView = (ListView) findViewById(R.id.id_listview_list);
+        /**不设置分柜器*/
         mListView.setDivider(null);
-        mListView.setAdapter(new ChatAdapter(this, ChatMessage.MOCK_DATAS));
+        /**设置adapter*/
+        mListView.setAdapter(new ChatAdapter(this, ChatModel.MOCK_DATAS));
 
     }
 

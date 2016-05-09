@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.example.benben.rcyclerviewlibrary.recyclerview.OnItemClickListener;
 import com.example.benben.recyclerview_adapter.R;
-import com.example.benben.recyclerview_adapter.bean.ChatMessage;
+import com.example.benben.recyclerview_adapter.bean.ChatModel;
 import com.example.benben.recyclerview_adapter.ui.adapter.ChatAdapterForRv;
 
 /**
@@ -37,15 +37,15 @@ public class ListViewActivity extends BaseActivity {
     private void initView() {
         mContent = (RecyclerView) findViewById(R.id.list_content);
         mContent.setLayoutManager(new LinearLayoutManager(this));
-        ChatAdapterForRv mAdapter = new ChatAdapterForRv(this, ChatMessage.MOCK_DATAS);
-        mAdapter.setOnItemClickListener(new OnItemClickListener<ChatMessage>() {
+        ChatAdapterForRv mAdapter = new ChatAdapterForRv(this, ChatModel.MOCK_DATAS);
+        mAdapter.setOnItemClickListener(new OnItemClickListener<ChatModel>() {
             @Override
-            public void onItemClick(ViewGroup parent, View view, ChatMessage chatMessage, int position) {
+            public void onItemClick(ViewGroup parent, View view, ChatModel chatMessage, int position) {
                 Toast.makeText(ListViewActivity.this, "Click" + position + "=>" + chatMessage.getContent(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public boolean onItemLongClick(ViewGroup parent, View view, ChatMessage chatMessage, int position) {
+            public boolean onItemLongClick(ViewGroup parent, View view, ChatModel chatMessage, int position) {
                 Toast.makeText(ListViewActivity.this, "再按我就删除" + position + "=>" + chatMessage.getContent(), Toast.LENGTH_SHORT).show();
                 return false;
             }

@@ -25,6 +25,14 @@ public abstract class CommonAdapter<T> extends RecyclerView.Adapter<ViewHolder> 
         this.mOnItemClickListener = onItemClickListener;
     }
 
+
+    /**
+     *普通的adapter
+     *
+     * @param context 上下文
+     * @param layoutId item 的id
+     * @param datas 数据
+     */
     public CommonAdapter(Context context, int layoutId, List<T> datas) {
         mContext = context;
         mInflater = LayoutInflater.from(context);
