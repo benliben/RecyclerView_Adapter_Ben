@@ -85,6 +85,14 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         return this;
     }
 
+    /**设置随机高度*/
+
+//    public ViewHolder setItemHeight(int viewId, int height) {
+//        ImageView im = getView(viewId);
+//        int heights =(int)(200 + Math.random() * height) ;
+//
+//    }
+
     /**
      * 设置image的值
      * @param viewId

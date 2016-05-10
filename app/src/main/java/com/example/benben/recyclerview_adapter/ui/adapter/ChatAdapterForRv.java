@@ -13,6 +13,7 @@ import java.util.List;
 
 /**
  * Created by beneben on 2016/5/7.
+ * 聊天adapter用于RecyclerView
  */
 public class ChatAdapterForRv extends MultiItemCommonAdapter<ChatModel>
 {

@@ -37,7 +37,7 @@ public class NewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recyclerview);
         ButterKnife.inject(this);
-        initDatas();
+        initDates();
         initView();
     }
 
@@ -86,13 +86,15 @@ public class NewActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(ViewGroup parent, View view, String s, int position) {
                 Toast.makeText(NewActivity.this, "再按我就跟你玩消失" + s, Toast.LENGTH_SHORT).show();
+
+
                 return true;
             }
         });
         mRecyclerview.setAdapter(adapter);
     }
 
-    private void initDatas() {
+    private void initDates() {
         for (int i = 1; i < 3; i++) {
             mDatas.add("A" + i);
         }
